@@ -2,7 +2,7 @@ package go_koans
 
 import "fmt"
 
-func aboutStrings() {
+func aboutStrings() int {
 	assert("a"+__string__ == "abc") // string concatenation need not be difficult
 	assert(len("abc") == __int__)   // and bounds are thoroughly checked
 
@@ -27,4 +27,6 @@ func aboutStrings() {
 	assert(fmt.Sprintf("hello %q", "world") == __string__)       // although it can be done more easily
 
 	assert(fmt.Sprintf("your balance: %d and %0.2f", 3, 4.5589) == __string__) // "the root of all evil" is actually a misquotation, by the way
+
+	return 15
 }

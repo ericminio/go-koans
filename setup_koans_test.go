@@ -23,9 +23,12 @@ const (
 
 var __runner__ runner = nil
 
+var goal int = 117
+var achievement int = 0
+
 func TestKoans(t *testing.T) {
-	aboutBasics()
-	aboutStrings()
+	achievement += aboutBasics()
+	achievement += aboutStrings()
 	aboutArrays()
 	aboutSlices()
 	aboutTypes()
@@ -44,13 +47,14 @@ func TestKoans(t *testing.T) {
 	aboutChannels()
 	aboutConcurrency()
 	aboutPanics()
-
+	
 	fmt.Printf("\n%c[32;1mYou won life. Good job.%c[0m\n\n", 27, 27)
 }
 
 func assert(o bool) {
 	if !o {
 		fmt.Printf("\n%c[35m%s%c[0m\n\n", 27, __getRecentLine(), 27)
+		fmt.Printf("\nRemember it is more about the journey: %d/%d\n\n", achievement, goal)
 		os.Exit(1)
 	}
 }

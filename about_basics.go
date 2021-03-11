@@ -1,6 +1,6 @@
 package go_koans
 
-func aboutBasics() {
+func aboutBasics() int {
 	assert(true == true)  // what is truth?
 	assert(true != false) // in it there is nothing false
 
@@ -31,4 +31,6 @@ func aboutBasics() {
 	assert(c.x == 0)     // and types within composite types
 	assert(c.f == 0) // which match the other types
 	assert(c.s == "")  // in a typical way
+
+	return 13
 }
