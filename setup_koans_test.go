@@ -29,8 +29,8 @@ var achievement int = 0
 func TestKoans(t *testing.T) {
 	achievement += aboutBasics()
 	achievement += aboutStrings()
-	aboutArrays()
-	aboutSlices()
+	achievement += aboutArrays()
+	achievement += aboutSlices()
 	aboutTypes()
 	aboutControlFlow()
 	aboutEnumeration()
